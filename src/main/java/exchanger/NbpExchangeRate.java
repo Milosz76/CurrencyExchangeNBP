@@ -20,4 +20,16 @@ public class NbpExchangeRate {
     public BigDecimal getMid() {
         return mid;
     }
+
+    public void setNo(String no) {
+        this.no = no;
+    }
+
+    public void setEffectiveDate(XMLGregorianCalendar effectiveDate) {
+        this.effectiveDate = effectiveDate;
+    }
+
+    public void setMid(BigDecimal mid) {
+        this.mid = mid;
+    }
 }
