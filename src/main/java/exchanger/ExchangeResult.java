@@ -27,4 +27,12 @@ public class ExchangeResult {
     public void setNbpExchangeRateResult(NbpExchangeRateResult nbpExchangeRateResult) {
         this.nbpExchangeRateResult = nbpExchangeRateResult;
     }
+
+    @Override
+    public String toString() {
+        return "ExchangeResult{" +
+                "calculateValue=" + calculateValue +
+                ", nbpExchangeRateResult=" + nbpExchangeRateResult +
+                '}';
+    }
 }

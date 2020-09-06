@@ -31,4 +31,13 @@ public class NbpExchangeRateResult {
     public void setResponseCode(int responseCode) {
         this.responseCode = responseCode;
     }
+
+    @Override
+    public String toString() {
+        return "NbpExchangeRateResult{" +
+                "rate=" + rate +
+                ", responseCode=" + responseCode +
+                ", responseMessage='" + responseMessage + '\'' +
+                '}';
+    }
 }
