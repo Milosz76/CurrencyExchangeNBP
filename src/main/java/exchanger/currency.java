@@ -1,10 +1,16 @@
 package exchanger;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
+@Getter
+@Setter
 @Table(name ="currency")
 public class currency {
+
     @Id
     @GeneratedValue
     private Long iddate;

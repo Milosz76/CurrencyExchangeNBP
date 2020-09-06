@@ -1,8 +1,10 @@
 package exchanger.repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import exchanger.CurrencyExchangeService;
+
+import javax.persistence.*;
+import java.util.Currency;
+import java.util.List;
 
 public class CurrencyRepository {
     private EntityManagerFactory managerFactory;
@@ -14,6 +16,24 @@ public class CurrencyRepository {
     }
 
 
+    public void save(Currency currency){
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        entityManager.persist(currency);
+        transaction.commit();
+    }
+
+    public void delete(Currency currency){
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        entityManager.remove(currency);
+        transaction.commit();
+    }
+
+    public void cleanUp(){
+        entityManager.close();
+        managerFactory.close();
+    }
 
 
 }
