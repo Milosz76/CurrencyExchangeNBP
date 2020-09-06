@@ -1,9 +1,9 @@
 package exchanger.repository;
 
+import exchanger.Currency;
 import exchanger.CurrencyExchangeService;
 
 import javax.persistence.*;
-import java.util.Currency;
 import java.util.List;
 
 public class CurrencyRepository {
