@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -16,22 +18,24 @@ public class Currency {
     private Integer iddate;
 
     @Column(name = "date")
-    private String date;
+    private LocalDate date;
 
     @Column(name = "currency_rate")
-    private String currencyRate;
+    private BigDecimal currencyRate;
 
     @Column(name = "currency_result")
-    private String currencyResult;
+    private BigDecimal currencyResult;
+
 
     public Integer getIddate() {
         return iddate;
     }
 
     public Currency() {
+
     }
 
-    public Currency(Integer iddate, String date, String currencyRate, String currencyResult) {
+    public Currency(Integer iddate, LocalDate date, BigDecimal currencyRate, BigDecimal currencyResult) {
         this.iddate = iddate;
         this.date = date;
         this.currencyRate = currencyRate;
@@ -42,27 +46,27 @@ public class Currency {
         this.iddate = iddate;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
-    public String getCurrencyRate() {
+    public BigDecimal getCurrencyRate() {
         return currencyRate;
     }
 
-    public void setCurrencyRate(String currencyRate) {
+    public void setCurrencyRate(BigDecimal currencyRate) {
         this.currencyRate = currencyRate;
     }
 
-    public String getCurrencyResult() {
+    public BigDecimal getCurrencyResult() {
         return currencyResult;
     }
 
-    public void setCurrencyResult(String currencyResult) {
+    public void setCurrencyResult(BigDecimal currencyResult) {
         this.currencyResult = currencyResult;
     }
 }
